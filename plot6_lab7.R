@@ -2,7 +2,7 @@ NEI <- readRDS("E:\\R\\summarySCC_PM25.rds")
 SCC <- readRDS("E:\\R\\Source_Classification_Code.rds") 
 
 #6. Порівняйте викиди від автомобільних джерел у місті Балтимор із аналогічними викидами в окрузі Лос-Анджелес, Каліфорнія (fips == "06037"). У якому місті відбулися значні зміни з часом у викидах від автомобільних джерел? 
-
+library(ggplot2)
 motor_vehicle_sources_1 <- SCC[grep("Vehicle", SCC$SCC.Level.Three, ignore.case = T), ]
 motor_vehicle_sources_df1 <- merge(NEI, motor_vehicle_sources_1, by="SCC")
 
