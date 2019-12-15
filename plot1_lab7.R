@@ -7,7 +7,7 @@ sum_emissions <- aggregate(Emissions~year, NEI, sum)
 format(sum_emissions$Emissions,scientific=FALSE)
 
 png("plot1.png", width=480, height=480)
-plot(sum_emissions, type = "l", xlab = "Year",  ylab = "Emissions of PM2.5 (tons)", main = "Total Emissions of PM2.5 from all U.S. Sources", xaxt = "n")
+plot(sum_emissions, type = "b", xlab = "Year",  ylab = "Emissions of PM2.5 (tons)", main = "Total Emissions of PM2.5 from all U.S. Sources", xaxt = "n")
 years = c(1999,2002,2005,2008)
 axis(1, at = years, labels = years);
 dev.off()
